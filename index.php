@@ -1,3 +1,4 @@
+<!-- Feito por Vinicius Carvalho -->
 <?php $pageTitle = 'Street Legends - Início'; include 'includes/header.php'; ?>
 <section class="hero reveal">
     <div class="hero-content">
@@ -11,8 +12,6 @@
         </div>
     </div>
     <div class="hero-card reveal">
-        <!-- TROQUE A IMAGEM ABAIXO pela sua foto/banner principal da Street Legends -->
-        <!-- Coloque o arquivo em: assets/img/banner.png -->
         <img src="<?= base_url('assets/img/banner2.png') ?>" alt="Coleção Street Legends">
     </div>
 </section>
