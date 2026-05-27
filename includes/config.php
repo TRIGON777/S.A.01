@@ -6,8 +6,8 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 
 function base_url($path = '') {
-    $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME']);
-    $base = rtrim(str_replace(basename($scriptName), '', $scriptName), '/');
+    $base = '';
+
     return $base . '/' . ltrim($path, '/');
 }
 

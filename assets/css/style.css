@@ -954,3 +954,11 @@
         flex-direction: column;
     }
 }
+
+.admin-product-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}

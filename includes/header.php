@@ -15,7 +15,7 @@ $pageTitle = $pageTitle ?? 'Street Legends';
 </head>
 <body>
 <header class="site-header">
-    <a class="brand" href="index.php">
+    <a class="brand" href="<?= base_url('index.php') ?>">
     <span class="brand-mark">
         <img src="<?= base_url('assets/img/favicon.png') ?>" alt="Street Legends">
     </span>
@@ -23,9 +23,12 @@ $pageTitle = $pageTitle ?? 'Street Legends';
 </a>
     <button class="menu-btn" aria-label="Abrir menu">☰</button>
     <nav class="nav">
-        <a href="index.php">Início</a>
-        <a href="produtos.php">Produtos</a>
-        <a href="carrinho.php">Carrinho <span class="badge"><?= cartCount() ?></span></a>
+        <a href="<?= base_url('index.php') ?>">Início</a>
+        <a href="<?= base_url('produtos.php') ?>">Produtos</a>
+        <a href="<?= base_url('carrinho.php') ?>">Carrinho <span class="badge"><?= cartCount() ?></span></a>
+        <a href="<?= base_url('logout.php') ?>">Sair</a>
+        <a href="<?= base_url('login.php') ?>">Login</a>
+        <a class="nav-pill" href="<?= base_url('cadastro.php') ?>">Criar conta</a>
         <?php if (isLoggedIn()): ?>
             <span class="hello">Olá, <?= h($_SESSION['user']['name']) ?></span>
             <a href="logout.php">Sair</a>

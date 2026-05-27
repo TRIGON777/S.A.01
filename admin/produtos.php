@@ -2,7 +2,6 @@
 require_once __DIR__ . '/../includes/database.php';
 require_once __DIR__ . '/../includes/functions.php';
 
-
 if (!isset($_SESSION['user']['id'])) {
     header('Location: ../login.php');
     exit;
@@ -89,7 +88,7 @@ require_once __DIR__ . '/../includes/header.php';
 
         <label>
             Imagem
-            <input type="text" name="imagem" placeholder="ex: camiseta.png" required>
+            <input type="text" name="imagem" placeholder="ex: assets/img/produtos/bone/bone01.png" required>
         </label>
 
         <div class="admin-form-buttons">
@@ -117,7 +116,11 @@ require_once __DIR__ . '/../includes/header.php';
                         <input type="hidden" name="id" value="<?= h($produto['id']) ?>">
 
                         <td>
-                            <img class="admin-product-img" src="<?= base_url('assets/img/' . $produto['image']) ?>" alt="<?= h($produto['name']) ?>">
+                            <img
+                                class="admin-product-img"
+                                src="<?= base_url($produto['image']) ?>"
+                                alt="<?= h($produto['name']) ?>"
+                            >
                         </td>
 
                         <td>
